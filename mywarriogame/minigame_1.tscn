@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://68wrqgaoj72y"]
+
+[ext_resource type="Texture2D" uid="uid://bu1w1xlkvfnhp" path="res://SOFT LIGHT YELLOW WALLPAPER.jpg" id="1_2n61g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cw5p"]
+size = Vector2(1198.5, 78)
+
+[node name="minigame_1" type="Node2D" unique_id=1953847060]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=376053859]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="Parallax2D" unique_id=1759694580]
+offset_right = 3045.0
+offset_bottom = 641.0
+texture = ExtResource("1_2n61g")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1898341478]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1279274910]
+position = Vector2(599.75, 648)
+shape = SubResource("RectangleShape2D_6cw5p")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1617006364]
+offset_left = -1.0
+offset_top = 609.0
+offset_right = 1193.0
+offset_bottom = 688.0
+color = Color(0.982766, 0.9179873, 0.49448824, 1)

@@ -1,3 +1,75 @@
 [gd_scene format=3 uid="uid://cr63eqw1sqddv"]
 
+[ext_resource type="Texture2D" uid="uid://pgectnwm4gma" path="res://360_F_494606734_j5OytYU7hrjc3V8yY548mdRHEWJOE3Si.jpg" id="1_3mivm"]
+[ext_resource type="Script" uid="uid://cd3d42ktnqiyk" path="res://level_scene.gd" id="1_lwxgr"]
+[ext_resource type="Texture2D" uid="uid://bcbvt7dnmsg8s" path="res://114319-images-wario-png-download-free.png" id="2_lwxgr"]
+[ext_resource type="Texture2D" uid="uid://seq0yk8khtho" path="res://25169-9-apple-fruit-image.png" id="3_8wodn"]
+
 [node name="level_scene" type="Node2D" unique_id=1043634417]
+script = ExtResource("1_lwxgr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=972414940]
+offset_right = 1153.0
+offset_bottom = 647.0
+texture = ExtResource("1_3mivm")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1398075286]
+offset_left = -70.0
+offset_top = 187.0
+offset_right = 405.0
+offset_bottom = 793.0
+texture = ExtResource("2_lwxgr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Applecontainer" type="HBoxContainer" parent="." unique_id=958837694]
+offset_left = 337.0
+offset_top = 481.0
+offset_right = 1086.0
+offset_bottom = 609.0
+
+[node name="apple" type="TextureRect" parent="Applecontainer" unique_id=1570126341]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+expand_mode = 2
+
+[node name="apple2" type="TextureRect" parent="Applecontainer" unique_id=924138125]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+expand_mode = 2
+
+[node name="Apple3" type="TextureRect" parent="Applecontainer" unique_id=1064009086]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+expand_mode = 2
+
+[node name="Apple4" type="TextureRect" parent="Applecontainer" unique_id=1502920928]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+expand_mode = 2
+
+[node name="Apple5" type="TextureRect" parent="Applecontainer" unique_id=2124789841]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+expand_mode = 2
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=2051509322]
+clip_contents = false
+offset_left = 509.0
+offset_top = 203.0
+offset_right = 940.0
+offset_bottom = 341.0
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/normal_font_size = 100
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1186647012]
+offset_left = 639.0
+offset_top = 410.0
+offset_right = 748.0
+offset_bottom = 478.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 46
+text = "0.0"
