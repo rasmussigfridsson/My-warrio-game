@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c4phsadbxjrqs"]
+
+[ext_resource type="Texture2D" uid="uid://pgectnwm4gma" path="res://360_F_494606734_j5OytYU7hrjc3V8yY548mdRHEWJOE3Si.jpg" id="1_d3ia8"]
+[ext_resource type="AudioStream" uid="uid://cvsj3lludov8h" path="res://the-winner-takes-all-c.mp3" id="1_dtg64"]
+[ext_resource type="Texture2D" uid="uid://dvufqm5etwqwv" path="res://114310-wario-free-download-png-hd(1).png" id="2_rnxuv"]
+[ext_resource type="Texture2D" uid="uid://d0lkupnsg588q" path="res://—Pngtree—gold color winner text_6989574.png" id="4_yfl3x"]
+
+[node name="Winner" type="Node2D" unique_id=945106595]
+position = Vector2(-593, -328)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=288149635]
+stream = ExtResource("1_dtg64")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=158766754]
+offset_left = 593.0
+offset_top = 328.0
+offset_right = 1745.0
+offset_bottom = 971.0
+texture = ExtResource("1_d3ia8")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1475972709]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 1.0
+offset_right = 823.00006
+offset_bottom = 501.0
+texture = ExtResource("2_rnxuv")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1504356813]
+offset_left = 564.0
+offset_top = 253.0
+offset_right = 1764.0
+offset_bottom = 1453.0
+texture = ExtResource("4_yfl3x")

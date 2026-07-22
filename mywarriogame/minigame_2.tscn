@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://seq0yk8khtho" path="res://25169-9-apple-fruit-image.png" id="2_2425y"]
 [ext_resource type="Script" uid="uid://c6rc80wnaieuu" path="res://button_1.gd" id="3_5x31c"]
 [ext_resource type="PackedScene" uid="uid://bvivfsa6d5w2l" path="res://Timer.tscn" id="4_3qiw4"]
+[ext_resource type="AudioStream" uid="uid://c6llhoqtew82w" path="res://undertale-megalovania-mp3cut.mp3" id="6_gc66t"]
 
 [node name="minigame_2" type="Node2D" unique_id=346256015]
 script = ExtResource("1_3qiw4")
@@ -78,7 +79,11 @@ stretch_mode = 0
 script = ExtResource("3_5x31c")
 
 [node name="ThemedTimer" parent="." unique_id=689904362 instance=ExtResource("4_3qiw4")]
-position = Vector2(1134, 6)
+position = Vector2(1036, 3)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1097994176]
+stream = ExtResource("6_gc66t")
+autoplay = true
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_5" to="." method="_on_button_5_pressed"]
