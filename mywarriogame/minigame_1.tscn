@@ -1,31 +1,105 @@
 [gd_scene format=3 uid="uid://68wrqgaoj72y"]
 
 [ext_resource type="Texture2D" uid="uid://bu1w1xlkvfnhp" path="res://SOFT LIGHT YELLOW WALLPAPER.jpg" id="1_2n61g"]
+[ext_resource type="Script" uid="uid://vf1cwk5kyo68" path="res://minigame_1.gd" id="1_wh6qq"]
+[ext_resource type="PackedScene" uid="uid://c5wn67e23n3ln" path="res://player.tscn" id="2_gi7k6"]
+[ext_resource type="PackedScene" uid="uid://b4s55unux54b3" path="res://apple.tscn" id="3_0hvi2"]
+[ext_resource type="PackedScene" uid="uid://bvivfsa6d5w2l" path="res://Timer.tscn" id="5_or1ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cw5p"]
-size = Vector2(1198.5, 78)
+size = Vector2(1194.125, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pqxs"]
+size = Vector2(402.5, 40)
 
 [node name="minigame_1" type="Node2D" unique_id=1953847060]
+script = ExtResource("1_wh6qq")
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=376053859]
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=376053859]
+scroll_offset = Vector2(1, -2)
 repeat_size = Vector2(1000, 0)
 autoscroll = Vector2(100, 0)
 
-[node name="Background" type="TextureRect" parent="Parallax2D" unique_id=1759694580]
-offset_right = 3045.0
-offset_bottom = 641.0
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=1759694580]
+offset_left = -1896.0
+offset_top = 1.0
+offset_right = 1149.0
+offset_bottom = 642.0
 texture = ExtResource("1_2n61g")
 expand_mode = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1898341478]
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1898341478]
+position = Vector2(-5, 7)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1279274910]
-position = Vector2(599.75, 648)
-shape = SubResource("RectangleShape2D_6cw5p")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1617006364]
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1617006364]
 offset_left = -1.0
 offset_top = 609.0
 offset_right = 1193.0
 offset_bottom = 688.0
 color = Color(0.982766, 0.9179873, 0.49448824, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1279274910]
+position = Vector2(596.9375, 647)
+shape = SubResource("RectangleShape2D_6cw5p")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1111188350]
+position = Vector2(-5, 7)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1138429774]
+offset_left = 587.0
+offset_top = 506.0
+offset_right = 990.0
+offset_bottom = 546.0
+color = Color(0.982766, 0.9179873, 0.49448824, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=496081882]
+position = Vector2(789, 524)
+shape = SubResource("RectangleShape2D_6pqxs")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1192507588]
+position = Vector2(-5, 7)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=285033502]
+offset_left = 75.0
+offset_top = 392.0
+offset_right = 476.0
+offset_bottom = 432.0
+color = Color(0.982766, 0.9179873, 0.49448824, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=583535731]
+position = Vector2(273, 410)
+shape = SubResource("RectangleShape2D_6pqxs")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=1485708109]
+position = Vector2(-5, 7)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=495698975]
+offset_left = 603.0
+offset_top = 257.0
+offset_right = 1004.0
+offset_bottom = 297.0
+color = Color(0.982766, 0.9179873, 0.49448824, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=868914105]
+position = Vector2(801, 279)
+shape = SubResource("RectangleShape2D_6pqxs")
+
+[node name="Player" parent="." unique_id=4201482 instance=ExtResource("2_gi7k6")]
+position = Vector2(50, 563)
+scale = Vector2(0.08, 0.08)
+
+[node name="apple" parent="." unique_id=1767264850 instance=ExtResource("3_0hvi2")]
+position = Vector2(1087, 568)
+
+[node name="apple2" parent="." unique_id=1536778676 instance=ExtResource("3_0hvi2")]
+position = Vector2(92, 355)
+
+[node name="apple3" parent="." unique_id=2050814870 instance=ExtResource("3_0hvi2")]
+position = Vector2(959, 219)
+
+[node name="ThemedTimer" parent="." unique_id=689904362 instance=ExtResource("5_or1ld")]
+position = Vector2(11, -8)
+
+[connection signal="apple_collected" from="apple" to="." method="_on_apple_apple_collected"]
+[connection signal="apple_collected" from="apple2" to="." method="_on_apple_2_apple_collected"]
+[connection signal="apple_collected" from="apple3" to="." method="_on_apple_3_apple_collected"]

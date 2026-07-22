@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://df8k1xowwry54" path="res://node_2d.gd" id="1_7jo7d"]
 
-[node name="Node2D" type="Node2D" unique_id=689904362]
+[node name="ThemedTimer" type="Node2D" unique_id=689904362]
 script = ExtResource("1_7jo7d")
 
 [node name="time" type="RichTextLabel" parent="." unique_id=1226739377]
-offset_right = 40.0
-offset_bottom = 40.0
+clip_contents = false
+offset_right = 134.0
+offset_bottom = 108.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 70
 text = "0.0"
