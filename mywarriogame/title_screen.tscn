@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dmxlq8ni0f2v8"]
+
+[ext_resource type="Script" uid="uid://cegss8rcectjx" path="res://title_screen.gd" id="1_05l2w"]
+[ext_resource type="Texture2D" uid="uid://pgectnwm4gma" path="res://360_F_494606734_j5OytYU7hrjc3V8yY548mdRHEWJOE3Si.jpg" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://bcbvt7dnmsg8s" path="res://114319-images-wario-png-download-free.png" id="2_ig5kc"]
+[ext_resource type="Script" uid="uid://c57abpf3w31gh" path="res://quit.gd" id="3_ig5kc"]
+
+[node name="TitleScreen" type="Node2D" unique_id=461921509]
+script = ExtResource("1_05l2w")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=406734483]
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = ExtResource("1_ak2if")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=514962795]
+offset_left = -77.0
+offset_top = 163.0
+offset_right = 420.0
+offset_bottom = 798.0
+texture = ExtResource("2_ig5kc")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Titel" type="RichTextLabel" parent="." unique_id=1459735886]
+clip_contents = false
+offset_left = 285.0
+offset_top = 10.0
+offset_right = 1097.0
+offset_bottom = 161.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "WarioMadness"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=795480990]
+offset_left = 531.0
+offset_top = 278.0
+offset_right = 729.0
+offset_bottom = 574.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=2035847509]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 35
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=512635147]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=739908355]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+script = ExtResource("3_ig5kc")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

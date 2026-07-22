@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dn8lvwkymqddg"]
+
+[ext_resource type="Script" uid="uid://c0caq16mr28tx" path="res://settings_screen.gd" id="1_b5707"]
+[ext_resource type="Texture2D" uid="uid://pgectnwm4gma" path="res://360_F_494606734_j5OytYU7hrjc3V8yY548mdRHEWJOE3Si.jpg" id="1_pfwel"]
+[ext_resource type="Texture2D" uid="uid://gppmpqnbgi60" path="res://pngfind.com-wario-head-png-6874637(1).png" id="2_b5707"]
+
+[node name="Settings_screen" type="Node2D" unique_id=401350004]
+script = ExtResource("1_b5707")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=887932687]
+offset_right = 1150.0
+offset_bottom = 648.0
+texture = ExtResource("1_pfwel")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1612914419]
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 315.0
+offset_bottom = 254.0
+texture = ExtResource("2_b5707")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1311171533]
+clip_contents = false
+offset_left = 373.0
+offset_top = 43.0
+offset_right = 822.0
+offset_bottom = 180.0
+theme_override_constants/outline_size = 26
+theme_override_font_sizes/normal_font_size = 100
+text = "Settings"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=747992043]
+offset_left = 397.0
+offset_top = 199.0
+offset_right = 532.0
+offset_bottom = 437.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=864465959]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 1"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1252533311]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 1"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1956632705]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 1"
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=259877046]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 1"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=53125036]
+offset_left = 596.0
+offset_top = 201.0
+offset_right = 731.0
+offset_bottom = 454.0
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=2061002376]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 2"
+
+[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=305780910]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 2"
+
+[node name="Button3" type="Button" parent="VBoxContainer2" unique_id=217025971]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 2"
+
+[node name="Button4" type="Button" parent="VBoxContainer2" unique_id=1896674740]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Setting 2"
+
+[node name="Back" type="Button" parent="." unique_id=1151678216]
+offset_left = 528.0
+offset_top = 443.0
+offset_right = 605.0
+offset_bottom = 493.0
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
