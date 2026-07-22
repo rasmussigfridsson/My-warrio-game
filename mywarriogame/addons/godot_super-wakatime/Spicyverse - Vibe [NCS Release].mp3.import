@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://biaj1p3wjj88"
+path="res://.godot/imported/Spicyverse - Vibe [NCS Release].mp3-06df617ce6912224ec7d575942b611ac.mp3str"
+
+[deps]
+
+source_file="res://addons/godot_super-wakatime/Spicyverse - Vibe [NCS Release].mp3"
+dest_files=["res://.godot/imported/Spicyverse - Vibe [NCS Release].mp3-06df617ce6912224ec7d575942b611ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

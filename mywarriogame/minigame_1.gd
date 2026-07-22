@@ -20,20 +20,23 @@ func _ready() -> void:
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"
 
-func _process(delta: float) -> void: # running every frame brochacho+
+func _process(delta: float) -> void:
 	
 	if apple_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
+		Global.last_game_won = true
 		if Global.minigames_done > 3: # we access a global script and see how many minigames have been compeleted
 			get_tree().change_scene_to_file("res://scenes/done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
 			get_tree().change_scene_to_file("res://level_scene.tscn") # go back to the intermission scene
 	
 	if timer_end: # if the timer does end...
+		Global.last_game_won = false 
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
 		get_tree().change_scene_to_file("res://level_scene.tscn") # back to intermission
 		
 
+		
 
 func _on_apple_apple_collected() -> void:
 	apple_collected +=1

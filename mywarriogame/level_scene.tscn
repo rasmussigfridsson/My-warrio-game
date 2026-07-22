@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cd3d42ktnqiyk" path="res://level_scene.gd" id="1_lwxgr"]
 [ext_resource type="Texture2D" uid="uid://bcbvt7dnmsg8s" path="res://114319-images-wario-png-download-free.png" id="2_lwxgr"]
 [ext_resource type="Texture2D" uid="uid://seq0yk8khtho" path="res://25169-9-apple-fruit-image.png" id="3_8wodn"]
+[ext_resource type="AudioStream" uid="uid://px1out5khevi" path="res://mii-channel-music.mp3" id="5_8wodn"]
 
 [node name="level_scene" type="Node2D" unique_id=1043634417]
 script = ExtResource("1_lwxgr")
@@ -73,3 +74,7 @@ offset_bottom = 478.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 46
 text = "0.0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=887629476]
+stream = ExtResource("5_8wodn")
+autoplay = true

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bcegbs1b8fxex"]
+
+[ext_resource type="AudioStream" uid="uid://dfmuyf8rodiaw" path="res://dun-dun-dun-sound-effect-brass_8nFBccR.mp3" id="1_qemge"]
+
+[node name="Death" type="Node2D" unique_id=1309780806]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1024188805]
+stream = ExtResource("1_qemge")
+autoplay = true

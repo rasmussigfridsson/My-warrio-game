@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c5wn67e23n3ln" path="res://player.tscn" id="2_gi7k6"]
 [ext_resource type="PackedScene" uid="uid://b4s55unux54b3" path="res://apple.tscn" id="3_0hvi2"]
 [ext_resource type="PackedScene" uid="uid://bvivfsa6d5w2l" path="res://Timer.tscn" id="5_or1ld"]
+[ext_resource type="AudioStream" uid="uid://c6llhoqtew82w" path="res://undertale-megalovania-mp3cut.mp3" id="6_or1ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cw5p"]
 size = Vector2(1194.125, 78)
@@ -99,6 +100,11 @@ position = Vector2(959, 219)
 
 [node name="ThemedTimer" parent="." unique_id=689904362 instance=ExtResource("5_or1ld")]
 position = Vector2(11, -8)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=746254856]
+stream = ExtResource("6_or1ld")
+volume_db = 7.298
+autoplay = true
 
 [connection signal="apple_collected" from="apple" to="." method="_on_apple_apple_collected"]
 [connection signal="apple_collected" from="apple2" to="." method="_on_apple_2_apple_collected"]

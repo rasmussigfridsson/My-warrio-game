@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pgectnwm4gma" path="res://360_F_494606734_j5OytYU7hrjc3V8yY548mdRHEWJOE3Si.jpg" id="1_ak2if"]
 [ext_resource type="Texture2D" uid="uid://bcbvt7dnmsg8s" path="res://114319-images-wario-png-download-free.png" id="2_ig5kc"]
 [ext_resource type="Script" uid="uid://c57abpf3w31gh" path="res://quit.gd" id="3_ig5kc"]
+[ext_resource type="AudioStream" uid="uid://biaj1p3wjj88" path="res://addons/godot_super-wakatime/Spicyverse - Vibe [NCS Release].mp3" id="5_hafda"]
 
 [node name="TitleScreen" type="Node2D" unique_id=461921509]
 script = ExtResource("1_05l2w")
@@ -56,6 +57,10 @@ theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 35
 text = "Quit"
 script = ExtResource("3_ig5kc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=573312279]
+stream = ExtResource("5_hafda")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
